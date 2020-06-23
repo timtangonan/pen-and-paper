@@ -1,0 +1,17 @@
+
+.product-list {
+    display: grid;
+    grid-gap: theme('spacing.10')
+  }
+
+  @screen sm {
+    .product-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @screen lg {
+    .product-list {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
