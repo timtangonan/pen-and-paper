@@ -11,7 +11,7 @@ const ProductPage = ({ data }) => {
             <Image
                 cloudName="timtangonan"
                 publicId={data.markdownRemark.frontmatter.image}
-                width="600"
+                width="400"
                 crop="scale"
                 fetchFormat="auto"
                 quality="auto"
