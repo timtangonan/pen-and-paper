@@ -27,7 +27,7 @@ const ProductsPage = ({ data }) => {
                             <div className="font-bold text-2xl">
                                 {node.frontmatter.name}
                             </div>
-                            <div className="font-semibold text-l text-gray-600">
+                            <div className="font-semibold text-l text-gray-900">
                                 Php {node.frontmatter.price}
                             </div>
                         </div>
