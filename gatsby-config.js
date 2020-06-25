@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+})
+
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -5,7 +9,7 @@ module.exports = {
     description: `The writing store that understands your needs for a stationery fix.`,
     author: `Tim Tangonan`,
     company: `Tim Tangonan Ltd`,
-    companyWebsite: `https://timtangonancom`
+    companyWebsite: `https://timtangonan.com`
   },
   plugins: [
     `gatsby-transformer-remark`,
@@ -29,6 +33,23 @@ module.exports = {
         tailwind: true,
         purgeOnly: ['src/styles/style.css', 'src/styles/global.css']
       }
-    }
+    },
+    // commented out lines function: upload local files under src/images/ into Cloudinary account
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `images`,
+    //     path: `${__dirname}/src/images`
+    //   }
+    // },
+    // {
+    //   resolve: `gatsby-transformer-cloudinary`,
+    //   options: {
+    //     cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+    //     apiKey: process.env.CLOUDINARY_API_KEY,
+    //     apiSecret: process.env.CLOUDINARY_API_SECRET,
+    //     uploadFolder: `pen-and-paper-ecommerce`
+    //   }
+    // }
   ],
 }

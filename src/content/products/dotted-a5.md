@@ -3,6 +3,7 @@ name: Dotted A5 Notebook
 price: 89.00
 id: prod-2
 templateKey: product-page
+image: pen-and-paper-ecommerce/dotted-a5.jpg
 ---
 ## Product Description
 

@@ -3,6 +3,7 @@ name: Whiteboard Marker
 price: 99.00
 id: prod-4
 templateKey: product-page
+image: pen-and-paper-ecommerce/whiteboard-marker.jpg
 ---
 ## Product Description
 

@@ -3,6 +3,7 @@ name: Sticky Note
 price: 44.00
 id: prod-3
 templateKey: product-page
+image: pen-and-paper-ecommerce/sticky-note.jpg
 ---
 ## Product Description
 
