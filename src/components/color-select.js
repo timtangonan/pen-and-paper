@@ -35,7 +35,7 @@ const ColorSelect = ({ changeColor }) => {
                         // </li>
                         <li key={color.hex} value={color.hex} className="mt-2">
                             <div onClick={e => applyColor(e, color.hex)}>
-                                <span className="cursor-pointer px-4 py-2 rounded m-1 inline-block text-white" style={{backgroundColor: `#` + color.hex}}>{color.name}</span>
+                                <span className="cursor-pointer px-4 py-2 rounded m-1 inline-block text-gray-800" style={{backgroundColor: `#` + color.hex}}>{color.name}</span>
                             </div>
                         </li>   
                     )
