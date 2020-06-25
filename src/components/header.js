@@ -30,7 +30,14 @@ const Header = ({ siteTitle }) => {
                     } md:block md:flex md:items-center w-full md:w-auto ml-auto`}>
                         <div className="text-lg font-bold mt-3 md:m-0">
                             <Link to="/" activeClassName="text-gray-500 underline" className="block p-1 md:px-4 md:inline-block">Home</Link>
-                            <Link to="/products" activeClassName="text-gray-500 underline" className="block p-1 md:px-4 md:inline-block">Products</Link>
+                            <Link to="/products" partiallyActive activeClassName="text-gray-500 underline" className="block p-1 md:px-4 md:inline-block">Products</Link>
+                            <button className="snipcart-checkout inline-block align-middle pl-8">
+                                <span className="snopping-cart inline-block align-middle">
+                                <svg className="w-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="M10 19.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm1.336-5l1.977-7h-16.813l2.938 7h11.898zm4.969-10l-3.432 12h-12.597l.839 2h13.239l3.474-12h1.929l.743-2h-4.195z"/></svg>
+                                </span>
+                                <span className="snipcart-items-count inline-block align-middle p-1 text-sm text-gray-300"></span>
+                                {/* <span className="snipcart-total-price inline-block align-middle p-1 text-sm text-gray-300"></span> */}
+                            </button>
                         </div>
                     </div>
                 </div>

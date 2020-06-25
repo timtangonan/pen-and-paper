@@ -34,6 +34,15 @@ module.exports = {
         purgeOnly: ['src/styles/style.css', 'src/styles/global.css']
       }
     },
+    {
+      resolve: `gatsby-plugin-snipcart`,
+      options: {
+        apiKey: process.env.SNIPCART,
+        js: `https://cdn.snipcart.com/themes/v3.0.3/default/snipcart.js`,
+        styles: `https://cdn.snipcart.com/themes/v3.0.3/default/snipcart.css`,
+        autopop: true
+      }
+    }
     // commented out lines function: upload local files under src/images/ into Cloudinary account
     // {
     //   resolve: `gatsby-source-filesystem`,

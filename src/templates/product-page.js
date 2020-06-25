@@ -27,7 +27,11 @@ const ProductPage = ({ data }) => {
                  <span className="block font-semibold text-lg text-blue-800">
                      Php{data.markdownRemark.frontmatter.price}
                  </span>
-                 <button className="btn btn-blue mt-4">
+                 <button className="btn btn-blue mt-4 snipcart-add-item" 
+                    data-item-id={data.markdownRemark.frontmatter.id}
+                    data-item-price={data.markdownRemark.frontmatter.price}
+                    data-item-url={data.markdownRemark.fields.slug}
+                    data-item-name={data.markdownRemark.frontmatter}>
                     Add to Cart
                  </button>
                  <div className="markdown mt-4" dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}></div>
