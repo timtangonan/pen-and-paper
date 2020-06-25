@@ -11,7 +11,7 @@ const Header = ({ siteTitle }) => {
             </Helmet>
             <nav className="bg-gray-800 text-white p-4">
                 <div className="flex flex-wrap container justify-between mx-auto p-2">
-                    <Link to="/" className="flex items-center no-underline"><span className="text-2xl" role="img" aria-label="paperclip">📎</span><span className="ml-2 font-bold">{siteTitle}</span></Link>
+                    <Link to="/" className="flex items-center no-underline"><span className="text-2xl" role="img" aria-label="paperclip">📎</span><span className="ml-2 font-bold text-2xl">Pen & Paper</span></Link>
                     <button className="block md:hidden border border-white flex items-center px-3 py-2" onClick={() => toggleExpansion(!isExpanded)}>
                         <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
                             <g>
