@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+
+.company-logo, .tagline-text {
+  font-family: 'Delius';
+}
+
 .product-list {
   display: grid;
   grid-gap: theme('spacing.20')

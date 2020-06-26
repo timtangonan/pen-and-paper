@@ -6,10 +6,10 @@ const IndexPage = () => {
   return (
     <div className="h-full">
       <div className="flex flex-col items-start justify-center h-full mx-auto sm:w-full sm:px-2 md:w-2/3">
-        <h1 className="mt-4 font-bold text-2xl"><strong className="text-gray-800">Your one-stop shop for art supplies.</strong></h1>
-        <p className="mt-4">Pen & Paper online store caters to your needs as a stationery junky. We completely understand the euphoria of smelling book pages and running your fingers over premium paper.</p>
+        <h1 className="my-4 font-bold text-3xl"><strong className="text-gray-800 font-bold tagline-text">Your one-stop shop for art supplies.</strong></h1>
+        <p className="my-2">Pen & Paper online store caters to your needs as a stationery junky. We completely understand the euphoria of smelling book pages and running your fingers over premium paper.</p>
         <button className="py-2 px-6 my-6 bg-blue-700 text-white rounded">
-          <Link to="/products">Browse Shop</Link>
+          <Link to="/products">Browse Store</Link>
         </button>
         <Image
           cloudName="timtangonan"
