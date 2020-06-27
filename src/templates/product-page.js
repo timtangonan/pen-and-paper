@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import { Link, graphql } from "gatsby"
 import { Image, Transformation } from "cloudinary-react"
 
@@ -6,9 +6,34 @@ import ColorSelect from "../components/color-select"
 
 const ProductPage = ({ data }) => {
     const [colorTransformation, setColor] = useState(``)
+    let [imageSource, setImageSource] = useState(``)
+    let [colorName, getColor] = useState(``)
+    const imageRef = useRef(null)
+
+    useEffect(() => {
+        setImageSource(() => imageRef.current.element.src)
+        if (imageRef.current && imageRef.current.element) {
+            const observer = new MutationObserver(muts => {
+                muts.forEach(m => {
+                    if(m.type === 'attributes' && m.attributeName === 'src') {
+                        setImageSource(() => m.target.src)
+                    }
+                })
+            })
+            observer.observe(imageRef.current.element, {
+                attributes: true
+            })
+        }
+    }, [imageSource])
+
+    if (colorName.length === 0) {
+        getColor(() => colorName = 'original')
+    }
+
     return (
         <div className="flex flex-col md:flex-row">
             <Image
+                ref={imageRef}
                 cloudName="timtangonan"
                 publicId={data.markdownRemark.frontmatter.image}
                 width="400"
@@ -29,13 +54,16 @@ const ProductPage = ({ data }) => {
                  </span>
                  <button className="btn btn-blue mt-4 snipcart-add-item" 
                     data-item-id={data.markdownRemark.frontmatter.id}
+                    data-item-custom1-name=""
+                    data-item-custom1-options={colorName}
                     data-item-price={data.markdownRemark.frontmatter.price}
                     data-item-url={data.markdownRemark.fields.slug}
-                    data-item-name={data.markdownRemark.frontmatter}>
+                    data-item-name={data.markdownRemark.frontmatter.name}
+                    data-item-image={imageSource}>
                     Add to Cart
                  </button>
                  <div className="markdown mt-4" dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}></div>
-                 { data.markdownRemark.fields.slug === "/products/dotted-a5/" ? <ColorSelect changeColor={setColor} /> : "" }
+                 { data.markdownRemark.fields.slug === "/products/dotted-a5/" ? <ColorSelect changeColor={setColor} getColorName={getColor} /> : "" }
              </div>
         </div>
     )
