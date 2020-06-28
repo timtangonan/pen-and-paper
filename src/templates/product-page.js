@@ -57,7 +57,7 @@ const ProductPage = ({ data }) => {
                     data-item-custom1-name=""
                     data-item-custom1-options={colorName}
                     data-item-price={data.markdownRemark.frontmatter.price}
-                    data-item-url={data.markdownRemark.fields.slug}
+                    data-item-url={"https://pen-and-paper.vercel.app/" + data.markdownRemark.fields.slug}
                     data-item-name={data.markdownRemark.frontmatter.name}
                     data-item-image={imageSource}>
                     Add to Cart
